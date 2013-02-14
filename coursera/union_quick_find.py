@@ -1,3 +1,4 @@
+#
 class UnionFind(object):
 	def __init__(self, n):
 		self._nodes_ = [x for x in range(0, n)]
