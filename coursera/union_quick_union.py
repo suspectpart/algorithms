@@ -6,6 +6,6 @@ class UnionFind(object):
 	def connected(self,p,q):
 		return self.root(p) == self.root(q)
 	def root(self, x):
-		while(x != self._nodes_[x]):
-			x = self._nodes_[x]
+		if(x != self._nodes_[x]):
+			return self.root(self._nodes_[x])
 		return x
