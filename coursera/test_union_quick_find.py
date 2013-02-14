@@ -9,3 +9,5 @@ def test_connected():
 	assert union.connected(1,2) == False
 	union.union(1,2)
 	assert union.connected(2,0)
+	assert union.connected(0,2)
+	assert union.connected(1,2)
