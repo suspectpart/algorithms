@@ -1,11 +1,11 @@
 class UnionFind(object):
 	def __init__(self,n):
-		self._nodes_ = [x for x in range(0,n)]
+		self.nodes = [x for x in range(0,n)]
 	def union(self, p, q):
-		self._nodes_[self.root(p)] = self.root(q)
+		self.nodes[self.root(p)] = self.root(q)
 	def connected(self,p,q):
 		return self.root(p) == self.root(q)
 	def root(self, x):
-		if(x != self._nodes_[x]):
-			return self.root(self._nodes_[x])
+		if x != self.nodes[x]:
+			return self.root(self.nodes[x])
 		return x
