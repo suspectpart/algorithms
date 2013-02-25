@@ -5,8 +5,10 @@ class Stack(object):
 	def push(self, item):
 		self.items.append(item)
 	def pop(self):
-		if self.count() == 0:
+		if self.is_empty():
 			return None
 		return self.items.pop()
+	def is_empty(self):
+		return self.count() == 0
 	def count(self):
 		return len(self.items)

@@ -27,3 +27,11 @@ def test_stack_count():
 	assert_equals(s.count(), 1)
 	s.pop()
 	assert_equals(s.count(), 0)
+	
+def test_is_empty():
+	s = Stack()
+	assert_equals(s.is_empty(), True)
+	s.push(1)
+	assert_equals(s.is_empty(), False)
+	s.pop()
+	assert_equals(s.is_empty(), True)
