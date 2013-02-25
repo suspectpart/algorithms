@@ -35,3 +35,11 @@ def test_is_empty():
 	assert_equals(s.is_empty(), False)
 	s.pop()
 	assert_equals(s.is_empty(), True)
+	
+def test_peek():
+	s = Stack()
+	assert_equals(s.peek(), None)
+	s.push(1)
+	assert_equals(s.peek(), 1)
+	assert_equals(s.count(), 1)
+	assert_equals(s.pop(), 1)

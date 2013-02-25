@@ -3,7 +3,13 @@ class Stack(object):
 	def __init__(self):
 		self.items = []
 	def push(self, item):
+		if(item == None):
+			return
 		self.items.append(item)
+	def peek(self):
+		item = self.pop()
+		self.push(item)
+		return item
 	def pop(self):
 		if self.is_empty():
 			return None
