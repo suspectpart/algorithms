@@ -3,12 +3,15 @@ from stack import Stack
 
 def test_empty_stack():
 	s = Stack()
+	assert_equals(s.is_empty(), True)
+	assert_equals(s.count(), 0)
 	assert_equals(s.pop(), None)
 
 def test_stack_with_one_item():
 	s = Stack()
 	s.push(1)
 	assert_equals(s.pop(), 1)
+	assert_equals(s.pop(), None)
 
 def test_stack_with_more_items():
 	s = Stack()
