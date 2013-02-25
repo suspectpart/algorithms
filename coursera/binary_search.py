@@ -8,7 +8,7 @@ class BinarySearch(object):
 			return -1
 		mid = lo + (hi-lo) / 2
 		if number < self.numbers[mid]:
-			return self._search(number, lo, hi = mid - 1)
+			return self._search(number, lo, mid - 1)
 		if number > self.numbers[mid]:
-			return self._search(number, lo = mid + 1, hi)
+			return self._search(number, mid + 1, hi)
 		return mid
