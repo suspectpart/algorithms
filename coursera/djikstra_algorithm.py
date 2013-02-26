@@ -17,9 +17,14 @@ class Djikstra(object):
 				x = self.values.pop()
 				y = self.values.pop()
 				op = self.operators.pop()
-				result = eval("{0}{1}{2}".format(x,op,y))
+				result = self.apply_operator_to(op,x,y)
 				self.values.push(result)
 		return self.values.pop()
 	
 	def is_operator(self, char):
-		return char in "+*"
+		return char in "+*-/"
+	
+	def apply_operator_to(self,op,x,y):
+		if op in "/-":
+			x,y = y,x
+		return eval("{0}{1}{2}".format(x,op,y))
