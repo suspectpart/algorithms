@@ -22,4 +22,4 @@ class Djikstra(object):
 		return self.values.pop()
 	
 	def is_operator(self, char):
-		return char == '+' or char == '*'
+		return char in "+*"
