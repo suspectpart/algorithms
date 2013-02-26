@@ -6,7 +6,7 @@ class BinarySearch(object):
 	def _search(self, number, lo, hi):
 		if lo > hi:
 			return -1
-		mid = lo + (hi-lo) / 2
+		mid = lo + (hi-lo >> 1)
 		if number < self.numbers[mid]:
 			return self._search(number, lo, mid - 1)
 		if number > self.numbers[mid]:
