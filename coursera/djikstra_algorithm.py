@@ -9,9 +9,7 @@ class Djikstra(object):
 	def parse(self, expression):
 		self.values.push(0)
 		for char in expression:
-			if char == '(':
-				continue
-			elif char.isdigit():
+			if char.isdigit():
 				self.values.push(float(char))
 			elif self.is_operator(char):
 				self.operators.push(char)
