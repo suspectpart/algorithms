@@ -1,5 +1,4 @@
 from stack import Stack
-import re
 
 class Djikstra(object):
 	def __init__(self):
