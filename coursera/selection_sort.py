@@ -3,7 +3,7 @@ class SelectionSort():
 	implemented sedgewick style!
 	
 	As we always have to loop because we can't know where the minimum item is,
-	this algorithm will always perform ~ N^2 / 2 compares, no matter if the input is already sorted or not.
+	this algorithm will always perform ~ N^2 / 2 compares, no matter whether the input is already sorted or not.
 	That sucks because - as sedgewick told us - quadratic time is no good.
 	'''
 	def sort(self, items):
