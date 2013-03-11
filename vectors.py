@@ -23,6 +23,12 @@ class Vector(object):
 	def magnitude(self):
 		return math.sqrt(sum([x**2 for x in self.coords]))
 
+	'''
+	The angle is defined as a * b = |a| * |b| * cos(alpha),
+	so we can say 
+	    cos(alpha) = a * b / |a| * |b|
+	<-> alpha = acos(a * b / |a| * |b|)
+	'''
 	def angle(self, other):
 		return math.degrees(math.acos(self.scalar_product(other) / (self.magnitude() * other.magnitude())))
 
