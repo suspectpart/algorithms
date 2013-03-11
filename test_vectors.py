@@ -47,3 +47,8 @@ def test_parallel():
 	v3 = Vector(3,2,1)
 	eq_(v1.parallel_to(v2), True)
 	eq_(v1.parallel_to(v3), False)
+
+def test_equals():
+	v1 = Vector(1,2,3)
+	v2 = Vector(1,2,3)
+	eq_(v1.equals(v2), True)

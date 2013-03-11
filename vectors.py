@@ -23,6 +23,17 @@ class Vector(object):
 	def magnitude(self):
 		return math.sqrt(sum([x**2 for x in self.coords]))
 
+	def parallel_to(self, other):
+		a1, b1, c1 = self.coords
+		a2, b2, c2 = other.coords
+		return a2 / a1 == b2 / b1 == c2 / c1
+
+	def equals(self, other):
+		parallel = self.parallel_to(other)
+		same_magnitude = self.magnitude() == other.magnitude()
+		same_orientation = self.angle(other) == 0
+		return parallel and same_orientation and same_magnitude
+
 	'''
 	The angle is defined as a * b = |a| * |b| * cos(alpha),
 	so we can say 
@@ -31,8 +42,3 @@ class Vector(object):
 	'''
 	def angle(self, other):
 		return math.degrees(math.acos(self.scalar_product(other) / (self.magnitude() * other.magnitude())))
-
-	def parallel_to(self, other):
-		a1, b1, c1 = self.coords
-		a2, b2, c2 = other.coords
-		return a2 / a1 == b2 / b1 == c2 / c1
